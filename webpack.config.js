@@ -14,7 +14,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test : /\.js$/,
+                test : /\.(js|jsx)$/,
                 loader : 'babel-loader',
                 options : {
                     presets : [ 'es2015', 'react', 'stage-2'],
@@ -24,7 +24,14 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
+                use: ['style-loader', 'css-loader','font?format[]=truetype&format[]=woff&format[]=embedded-opentype'],
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                use: [
+                    'url-loader?limit=10000',
+                    'img-loader'
+                ]
             }
 
         ]
