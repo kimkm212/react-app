@@ -12,11 +12,11 @@ class ContentWrap extends Component {
 
     render() {
         return (
+            <div>
 
-            <Container textAlign='justified'>
-                <SubMenu/>
+              {/*  <SubMenu/>*/}
                 <Content/>
-            </Container>
+            </div>
         );
     }
 }
