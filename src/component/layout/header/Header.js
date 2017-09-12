@@ -5,7 +5,7 @@ import NavigationClose from 'material-ui/svg-icons/navigation/close';
 
 const Header = ({titleName}) => (
     <AppBar
-        title={titleName}
+        title="블로그 DEMO"
         iconClassNameRight="muidocs-icon-navigation-expand-more"
     />
 )

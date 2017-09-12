@@ -15,9 +15,9 @@ class Content extends Component {
                     title="제목제목제목제목"
                     subtitle="서브타이틀서브타이틀"
                 />
+                <CardTitle title="제목 제목 제목" subtitle="2017년 09월 18일" />
                 <Divider />
-                <CardTitle title="Card title" subtitle="Card subtitle" />
-                <CardText>
+                <CardText style={{'line-height':'2rem','min-height':'40rem'}}>
                     [뉴욕=이데일리 안승찬 특파원] 유엔 안전보장이사회의 새로운 대북 제재결의안 2375호가 11일(현지시간) 만장일치로 채택됐다.
 
                     북한의 6차 핵실험 직후인 지난 4일 안보리의 긴급회의가 소집된 이후 9일 만에 추가 제재 결의안이 채택된 것이다. 이전 제제 결의안은 북한의 ICBM(대륙간 탄도미사일)급 미사일이 발사된 이후 채택되는 데까지 33일이 걸렸다. 유례없는 속도전이다.
@@ -46,8 +46,7 @@ class Content extends Component {
 
                 </CardText>
                 <CardActions>
-                    <RaisedButton label="Action1"  primary={true} />
-                    <RaisedButton label="Action2" secondary={true} />
+
                 </CardActions>
             </Card>
         );
