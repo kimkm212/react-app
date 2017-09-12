@@ -6,13 +6,13 @@ import ContentWrap from "./component/content/ContentWrap";
 
 
 class App extends React.Component {
-
-
-
+    constructor(props) {
+        super(props);
+    }
     render(){
         return (
             <div>
-                <Header/>
+                <Header titleName="하하"/>
                 <ContentWrap/>
                 <Footer/>
             </div>
