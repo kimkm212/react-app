@@ -7,9 +7,16 @@ import MultiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
+
+import reducer from './reducer';
+
+const store = createStore(reducer);
+
 const Index = () => (
     <MultiThemeProvider>
-        <App/>
+        <Provider store={store}>
+            <App/>
+        </Provider>
     </MultiThemeProvider>
 )
 
