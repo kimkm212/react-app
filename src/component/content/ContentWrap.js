@@ -5,22 +5,28 @@ import Content from "./Content";
 import * as action from '../../action/content';
 import SubMenu from "./SubMenu";
 
-const ContentWrap = ({content,contentNext,contentPrev}) => {
 
-    return (
-        <div>
+class ContentWrap extends Component {
 
-          {/*  <SubMenu/>*/}
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        const { content, contentNext, contentPrev} = this.props;
+        return (
             <Content
                 content={content}
                 contentNext={contentNext}
                 contentPrev={contentPrev}
             />
-        </div>
-    );
+        )
+    }
 }
 
-ContentWrap.propTypes = {};
+ContentWrap.propTypes = {
+    content : PropTypes.object
+};
 
 ContentWrap.defaultProps = {};
 
