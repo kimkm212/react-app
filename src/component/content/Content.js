@@ -2,13 +2,9 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import {FlatButton, RaisedButton, Divider} from 'material-ui';
+import './Content.css';
 
-const Content = ({content,contentNext,contentPrev}) => {
-
-    const style = {
-        'line-height':'2rem',
-        'min-height':'40rem'
-    }
+const Content = ({content, contentNext, contentPrev}) => {
 
     return (
         <Card>
@@ -22,12 +18,12 @@ const Content = ({content,contentNext,contentPrev}) => {
             </CardActions>
             <CardTitle title={content.subject} subtitle={content.regDate} />
             <Divider />
-            <CardText style={style}>
+            <CardText className="content-area">
                 {content.content}
             </CardText>
         </Card>
     )
-}
+};
 
 Content.propTypes = {};
 

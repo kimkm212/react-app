@@ -8,7 +8,8 @@ module.exports = {
     devServer: {
         inline: true,
         port: 7777,
-        contentBase: __dirname + '/public/'
+        contentBase: __dirname + '/public/',
+        historyApiFallback: true
     },
 
     module: {
@@ -24,7 +25,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader','font?format[]=truetype&format[]=woff&format[]=embedded-opentype'],
+                use: ['style-loader', 'css-loader'],
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,

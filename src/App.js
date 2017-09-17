@@ -1,4 +1,5 @@
 import React from 'react';
+import {Route} from 'react-router-dom'
 import Header from "./component/layout/header/Header";
 import Footer from "./component/layout/footer/Footer";
 import Content from "./component/content/Content";
@@ -13,7 +14,7 @@ class App extends React.Component {
         return (
             <div>
                 <Header titleName="하하"/>
-                <ContentWrap/>
+                <Route  path="/content" component={ContentWrap}/>
                 <Footer/>
             </div>
         );

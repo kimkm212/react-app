@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux'
+import axios from 'axios';
 import Content from "./Content";
 import * as action from '../../action/content';
-import SubMenu from "./SubMenu";
+import SubMenu from "../layout/subMenu/SubMenu";
 
 
 class ContentWrap extends Component {
@@ -11,6 +12,7 @@ class ContentWrap extends Component {
     constructor(props) {
         super(props);
     }
+
 
     render() {
         const { content, contentNext, contentPrev} = this.props;
