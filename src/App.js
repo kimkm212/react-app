@@ -14,7 +14,7 @@ class App extends React.Component {
         return (
             <div>
                 <Header titleName="하하"/>
-                <Route  path="/content" component={ContentWrap}/>
+                <ContentWrap/>
                 <Footer/>
             </div>
         );

@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
+import {Route} from 'react-router-dom'
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux'
 import axios from 'axios';
 import Content from "./Content";
+import Form from './Form';
 import * as action from '../../action/content';
 import SubMenu from "../layout/subMenu/SubMenu";
 
@@ -13,15 +15,26 @@ class ContentWrap extends Component {
         super(props);
     }
 
+/*    componentDidMount(){
+        axios.get('http://localhost:8080/content/list/1').then(t => {
+            console.log(t.data);
+        });
+    }*/
 
     render() {
         const { content, contentNext, contentPrev} = this.props;
-        return (
+        const ContentComp = () => (
             <Content
                 content={content}
                 contentNext={contentNext}
                 contentPrev={contentPrev}
             />
+        );
+        return (
+            <div>
+                <Route path="/content" component={ContentComp}/>
+                <Route path="/form" component={Form}/>
+            </div>
         )
     }
 }
