@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {TextField} from 'material-ui';
+import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui';
 class Form extends Component {
 
     constructor(props) {
@@ -9,12 +10,16 @@ class Form extends Component {
 
     render() {
         return (
-            <div>
-                <TextField
-                    hintText="재목"
-                    fullWidth={true}
-                />
-            </div>
+            <Card>
+                <CardTitle>
+                    <TextField
+                        hintText="재목"
+                        fullWidth={true}
+                    />
+                </CardTitle>
+                <CardText>
+                </CardText>
+            </Card>
         );
     }
 }
