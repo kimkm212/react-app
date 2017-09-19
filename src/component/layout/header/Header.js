@@ -4,6 +4,7 @@ import {AppBar, IconButton, FlatButton} from 'material-ui';
 import { connect } from 'react-redux';
 
 const Header = ({titleName}) => (
+
     <AppBar
         title={titleName}
         iconClassNameRight="muidocs-icon-navigation-expand-more"

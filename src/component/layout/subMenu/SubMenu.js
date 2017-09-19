@@ -11,7 +11,7 @@ class SubMenu extends Component {
     render() {
 
         return (
-            <div>
+            <div style={{width:'30px', height:'100%'}}>
                 서브
             </div>
         )
